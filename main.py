@@ -26,6 +26,14 @@ canvas.create_image(100, 112, image=tomato_img)
 canvas.create_text(100, 130, text="00:00", fill="white", font=(FONT_NAME, 35, "bold" ) )
 canvas.pack()
 
+timer_label = Label(text="Timer")
+timer_label.pack()
+
+start_button = Button(text="Start", command=start_button_pressed)
+start_button.pack()
+
+reset_button = Button(text="Reset", command=reset_button_pressed)
+
 
 
 
