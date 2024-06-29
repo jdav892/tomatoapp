@@ -22,10 +22,13 @@ def start_timer():
     
     if reps % 2 != 0:
         count_down(work_sec)
+        timer_label.config(text="Work", fg=GREEN)
     elif reps % 2 == 0 and reps < 8:
         count_down(short_break_sec)
+        timer_label.config(text="Break", fg=PINK)
     else:
         count_down(long_break_sec)
+        timer_label.config(text="Break", fg=RED)
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 def count_down(count):
     count_min = math.floor(count / 60)
